@@ -7,7 +7,15 @@
     {
         [Required]
         public Guid TeamId { get; set; }
+ 
         [Required]
         public string DisplayName { get; set; }
+
+        public int Priority { get; set; }
+
+        public DateTime? StartDate { get; set; }
+
+        public string Location { get; set; }
+
     }
 }

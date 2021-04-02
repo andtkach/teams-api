@@ -53,6 +53,9 @@ namespace Teams.Services.Core.Services.Teams
             {
                 TeamId = value.TeamId,
                 DisplayName = value.DisplayName,
+                StartDate = value.StartDate,
+                Location = value.Location,
+                Priority = value.Priority,
                 Author = author
             };
 
@@ -66,6 +69,9 @@ namespace Teams.Services.Core.Services.Teams
             var result = await this.GetProjectAsync(value.Id);
             result.TeamId = value.TeamId;
             result.DisplayName = value.DisplayName;
+            result.Location = value.Location;
+            result.Priority = value.Priority;
+            result.StartDate = value.StartDate;
             result.Author = author;
 
             result.ApplyDefaults(true);
@@ -94,7 +100,7 @@ namespace Teams.Services.Core.Services.Teams
                         _.BaseType == nameof(Member)
                         && _.TeamId == id
                         && _.Author == author))
-                    .OrderBy(o => o.DisplayName)
+                    .OrderBy(o => o.FirstName)
             };
 
             return result;
@@ -158,7 +164,9 @@ namespace Teams.Services.Core.Services.Teams
             Member result = new Member()
             {
                 TeamId = value.TeamId,
-                DisplayName = value.DisplayName,
+                FirstName = value.FirstName,
+                LastName = value.LastName,
+                Email = value.Email,
                 Author = author,
             };
             result.ApplyDefaults();
@@ -170,7 +178,9 @@ namespace Teams.Services.Core.Services.Teams
         {
             var result = await this.GetMemberAsync(value.Id);
             result.TeamId = value.TeamId;
-            result.DisplayName = value.DisplayName;
+            result.FirstName = value.FirstName;
+            result.LastName = value.LastName;
+            result.Email = value.Email;
             result.Author = author;
             result.ApplyDefaults(true);
             await this._members.UpdateItemAsync(result.Id, result);

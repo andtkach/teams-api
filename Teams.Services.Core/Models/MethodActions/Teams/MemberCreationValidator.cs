@@ -8,7 +8,8 @@
         public MemberCreationValidator()
         {
             RuleFor(x => x.TeamId).PopulatedGuid();
-            RuleFor(x => x.DisplayName).NotNull();
+            RuleFor(x => x.FirstName).NotNull();
+            RuleFor(x => x.Email).NotNull();
         }
     }
 }

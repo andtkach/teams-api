@@ -8,5 +8,11 @@
         public Guid TeamId { get; set; }
 
         public string DisplayName { get; set; }
+
+        public int Priority { get; set; }
+
+        public DateTime? StartDate { get; set; }
+
+        public string Location { get; set; }
     }
 }
