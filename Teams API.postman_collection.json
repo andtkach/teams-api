@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "5b0e00ed-702c-4363-941a-7284a29c9b01",
+		"name": "Teams API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "SubscriptionKey",
+								"value": "5ABADE6C-38A1-42FE-95AC-8922F7B360AB",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/bbe9a74f-fb54-4ba7-8bfa-06987e73a99a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "SubscriptionKey",
+								"value": "5ABADE6C-38A1-42FE-95AC-8922F7B360AB",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"displayName\": \"Other Team 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"id\": \"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a\",\r\n  \"displayName\": \"Updated Team\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/84da3d46-8cf5-4446-822c-eee68dce1c5e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"84da3d46-8cf5-4446-822c-eee68dce1c5e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/bbe9a74f-fb54-4ba7-8bfa-06987e73a99a/details",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects/1dacb341-df90-4a76-92d3-e9e6c8c57632",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects",
+								"1dacb341-df90-4a76-92d3-e9e6c8c57632"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all for Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects?id=bbe9a74f-fb54-4ba7-8bfa-06987e73a99a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "bbe9a74f-fb54-4ba7-8bfa-06987e73a99a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"teamId\": \"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a\",\r\n  \"displayName\": \"Project 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"f897535c-3b08-4a49-9fea-296e91dc69f9\",\r\n  \"teamId\": \"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a\",\r\n  \"displayName\": \"Project 111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/projects/1dacb341-df90-4a76-92d3-e9e6c8c57632",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"projects",
+								"1dacb341-df90-4a76-92d3-e9e6c8c57632"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Members",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members/3b9b6489-c188-4192-b8e5-7e79b94c27c0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members",
+								"3b9b6489-c188-4192-b8e5-7e79b94c27c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"teamId\": \"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a\",\r\n  \"displayName\": \"Jane\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"63f5f084-737f-48a2-9190-df30b157b558\",\r\n  \"teamId\": \"bbe9a74f-fb54-4ba7-8bfa-06987e73a99a\",\r\n  \"displayName\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members/63f5f084-737f-48a2-9190-df30b157b558",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members",
+								"63f5f084-737f-48a2-9190-df30b157b558"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all for Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44348/api/v1/teams/members?id=bbe9a74f-fb54-4ba7-8bfa-06987e73a99a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44348",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"members"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "bbe9a74f-fb54-4ba7-8bfa-06987e73a99a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

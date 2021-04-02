@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.AspNetCore" Version="7.6.103" />
+	 
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
+		 
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Filters\DocumentEnumFilter.cs">
+	    <ExcludeFromSourceAnalysis>False</ExcludeFromSourceAnalysis>
+	    <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+	  </Compile>
+	  <Compile Update="Filters\ExceptionFilter.cs">
+	    <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+	    <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+	  </Compile>
+	  <Compile Update="Services\Data\DocumentService.cs">
+	    <ExcludeFromSourceAnalysis>False</ExcludeFromSourceAnalysis>
+	    <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+	  </Compile>
+	</ItemGroup>
+</Project>
